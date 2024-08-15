@@ -1,0 +1,7 @@
+(rule
+ (targets config.ml prim.ml)
+ (action
+  (run bash %{dep:../configure} "%{read:../VERSION}" "%{ocaml_bin}")))
+
+(library
+ (name oByteLib))
